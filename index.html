@@ -95,7 +95,45 @@
             text-shadow: 2px;
 
         }
-        
+        @media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+            .greeting {
+            font-size: 30px;
+
+            margin-bottom: 30px;
+            
+            width: 80vw;
+            color: rgb(199, 157, 73);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .todo {
+            color: rgb(199, 157, 73);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .currentTime {
+            margin: 20px 0;
+            color: rgb(199, 157, 73);
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .todoTitle {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .todoContent {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        }
     </style>
     <script>
         
