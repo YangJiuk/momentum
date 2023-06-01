@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: black;
         }
 
         .blog {
@@ -65,6 +65,19 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Animation */
+        .blog {
+            background-image: radial-gradient(circle at center, green 10%, transparent 30%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 0% 0%;
+            transition: background-size 0.5s;
+        }
+
+        .blog:hover {
+            background-size: 100% 100%;
+        }
     </style>
 </head>
 <body>
@@ -72,21 +85,21 @@
         <h1>프로그래밍: 커맨드 패턴의 개념 및 활용 예시</h1>
         <p>커맨드 패턴은 객체 지향 프로그래밍에서 행동 디자인 패턴 중 하나입니다. 이 패턴은 요청 자체를 객체화함으로써 클라이언트와 수신자를 분리합니다. 이것은 다양한 명령, 큐, 요청 및 연산을 객체로 만들고 수신자와 호출 정보를 함께 저장하여 나중에 연산을 수행할 수 있도록 합니다. 커맨드 패턴은 재사용이 가능하며 연산과 그 호출 정보를 저장해 두었다가 적절한 시기에 수행하거나 취소하는 등의 기능을 수행합니다.</p>
         <pre>
-<mark style="background-color: #00FF00;">public interface ICommand</mark>
+public interface ICommand
 {
-    <mark style="background-color: #00FF00;">void Execute();</mark>
+    void Execute();
 }
 
-<mark style="background-color: #00FF00;">public class JumpCommand : ICommand</mark>
+public class JumpCommand : ICommand
 {
     private Player _player;
     
-    <mark style="background-color: #00FF00;">public JumpCommand(Player player)</mark>
+    public JumpCommand(Player player)
     {
         _player = player;
     }
 
-    <mark style="background-color: #00FF00;">public void Execute()</mark>
+    public void Execute()
     {
         _player.Jump();
     }
