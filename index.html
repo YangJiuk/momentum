@@ -35,6 +35,20 @@
             font-size: 0.8em;
             text-align: right;
         }
+        #popup {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
     </style>
 </head>
 <body>
@@ -104,5 +118,10 @@ public class InputHandler
             <p>참고: <a href="https://en.wikipedia.org/wiki/Command_pattern">위키피디아</a></p>
         </footer>
     </div>
+    
+    <div id="popup" class="hidden">
+    <img id="popup-img" src="">
+</div>
+
 </body>
 </html>
